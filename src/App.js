@@ -29,6 +29,8 @@ export const App = () => {
   const [fov, setFov] = useState(15)
   const [showScrollText, setShowScrollText] = useState(true)
   const [loadingComplete, setLoadingComplete] = useState(false)
+  const isMobile = window.innerWidth < 768;
+
 
   const toggleFov = () => {
     setFov((prevFov) => (prevFov === 15 ? 105 : 15))
@@ -49,7 +51,7 @@ export const App = () => {
           <fog attach="fog" args={['#a79', 8.5, 12]} />
           <ScrollControls pages={4} infinite>
             <Rig rotation={[0, 0, 0.15]} fov={fov}>
-              <Carousel />
+              <Carousel  />
             </Rig>
             <Model position={[0, -0.15, 0]} /> {/* Replace the mesh with the model */}
             <Banner position={[0, -0.15, 0]} />
@@ -93,6 +95,7 @@ function Carousel({ radius = 1.4, count = 8 }) {
       url={`/img${Math.floor(i % 10) + 1}_.webp`}
       position={[Math.sin((i / count) * Math.PI * 2) * radius, 0, Math.cos((i / count) * Math.PI * 2) * radius]}
       rotation={[0, Math.PI + (i / count) * Math.PI * 2, 0]}
+      
     />
   ))
 }

@@ -10,20 +10,102 @@ License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 */
 
 function Root() {
+  const isMobile = window.innerWidth < 768
+
+  const commonLinkStyle = {
+    position: 'absolute',
+    fontSize: '1.1rem',
+    color: 'white',
+  }
+
+  const desktopStyles = {
+    container: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100vw',
+      height: '100vh',
+      pointerEvents: 'none',
+    },
+    pumpFun: {
+      ...commonLinkStyle,
+      bottom: 100,
+      left: 20,
+      textAlign: 'left',
+      fontSize: "2"
+    },
+    telegram: {
+      position: 'absolute',
+      bottom: 100,
+      right: 20,
+      fontSize: '2.1rem',
+      color: 'white',
+      textAlign: 'right',
+    },
+    title: {
+      width: '100%',
+      position: 'absolute',
+      top: 20,
+      fontSize: '4rem',
+      color: 'white',
+      textAlign: 'center',
+      margin: '0 auto',
+    }
+  }
+
+  const mobileStyles = {
+    container: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100vw',
+      height: '100vh',
+      pointerEvents: 'none',
+    },
+    pumpFun: {
+      ...commonLinkStyle,
+      bottom: 60,
+      left: 10,
+      fontSize: '0.8rem',
+      textAlign: 'left',
+    },
+    telegram: {
+      position: 'absolute',
+      bottom: 60,
+      right: 10,
+      fontSize: '0.8rem',
+      color: 'white',
+      textAlign: 'right',
+    },
+    title: {
+      width: '100%',
+      position: 'absolute',
+      top: 10,
+      fontSize: '2rem',
+      color: 'white',
+      textAlign: 'center',
+      margin: '0 auto',
+    }
+  }
+
+  const styles = isMobile ? mobileStyles : desktopStyles
+
   return (
     <>
       <App />
-      <div className='press-start-2p-regular' style={{ position: 'absolute', pointerEvents: 'none', top: 0, left: 0, width: '100vw', height: '100vh' }}>
-        <a className='press-start-2p-regular' href="https://pump.fun/6y3uoLaD377QWHCFxN9fcYuYthXawEDyB3gsUGtkpump" style={{ position: 'absolute', bottom: 40, left: 90, fontSize: '1.1rem',color:"white" }}>
+      <div className='press-start-2p-regular' style={styles.container}>
+        <a className='press-start-2p-regular pumpFun' href="https://pump.fun/6y3uoLaD377QWHCFxN9fcYuYthXawEDyB3gsUGtkpump" style={styles.pumpFun}>
           PUMP.FUN
           <br />
-        Crypto: From Beginning To The End
+          Crypto: From Beginning To The End
         </a>
-        <div style={{ position: 'absolute', bottom: 40, right: 40, fontSize: '30px', color:"white" }}><a className='press-start-2p-regular' href='#' style={{color:"white"}}>Telegram</a></div>
-        <a className='tit press-start-2p-regular' style={{ width:"100%",position: 'absolute', top: 40, fontSize: '4rem',color:"white", textAlign:"center", margin:"0 auto" }} href="#">
-        Crypto: From Beginning <br/> To The End
+        <div style={styles.telegram}>
+          <a className='press-start-2p-regular' href='#' style={{ color: 'white' }}>Telegram</a>
+        </div>
+        <a className='tit press-start-2p-regular' style={styles.title} href="#">
+          Crypto: From Beginning <br /> To The End
         </a>
-      </div>{' '}
+      </div>
     </>
   )
 }
