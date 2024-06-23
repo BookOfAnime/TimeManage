@@ -94,7 +94,7 @@ function Root() {
     <>
       <App />
       <div className='press-start-2p-regular' style={styles.container}>
-        <a className='press-start-2p-regular pumpFun' href="https://pump.fun/6y3uoLaD377QWHCFxN9fcYuYthXawEDyB3gsUGtkpump" style={styles.pumpFun}>
+        <a className='press-start-2p-regular pumpFun' href="https://pump.fun/" style={styles.pumpFun}>
           PUMP.FUN
           <br />
           Snapshots in Time
