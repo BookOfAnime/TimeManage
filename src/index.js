@@ -100,7 +100,7 @@ function Root() {
           Snapshots in Time
         </a>
         <div style={styles.telegram}>
-          <a className='press-start-2p-regular' href='#' style={{ color: 'white' }}>Telegram</a>
+          <a className='press-start-2p-regular' href='https://t.me/SnapshotsInTimePortal' style={{ color: 'white' }}>Telegram</a>
         </div>
         <a className='tit press-start-2p-regular' style={styles.title} href="#">
           Snapshots in Time
