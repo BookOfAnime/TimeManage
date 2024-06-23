@@ -97,13 +97,13 @@ function Root() {
         <a className='press-start-2p-regular pumpFun' href="https://pump.fun/6y3uoLaD377QWHCFxN9fcYuYthXawEDyB3gsUGtkpump" style={styles.pumpFun}>
           PUMP.FUN
           <br />
-          Crypto: From Beginning To The End
+          Snapshots in Time
         </a>
         <div style={styles.telegram}>
           <a className='press-start-2p-regular' href='#' style={{ color: 'white' }}>Telegram</a>
         </div>
         <a className='tit press-start-2p-regular' style={styles.title} href="#">
-          Crypto: From Beginning <br /> To The End
+          Snapshots in Time
         </a>
       </div>
     </>
