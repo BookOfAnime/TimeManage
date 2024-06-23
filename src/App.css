@@ -1,4 +1,8 @@
 /* App.css */
+body {
+  background: url("/public/assets/time.png");
+}
+
 
 .app-container {
     position: relative;
