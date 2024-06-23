@@ -48,7 +48,6 @@ export const App = () => {
     <div className="app-container">
       <Canvas camera={{ position: [0, 0, 100], fov }}>
         <Suspense fallback={<CubeLoader setLoadingComplete={setLoadingComplete} />}>
-          <fog attach="fog" args={['#a79', 8.5, 12]} />
           <ScrollControls pages={4} infinite>
             <Rig rotation={[0, 0, 0.15]} fov={fov}>
               <Carousel  />
@@ -67,7 +66,7 @@ export const App = () => {
 
       {loadingComplete && (
         <button onClick={toggleFov} className="toggle-button press-start-2p-regular">
-          To the Moon
+          Click me!
         </button>
       )}
     </div>
