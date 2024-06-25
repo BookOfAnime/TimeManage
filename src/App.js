@@ -20,7 +20,7 @@ const CubeLoader = ({ setLoadingComplete }) => {
       <div className="">
         <div className="loader-progress" style={{ width: `${progress}%` }}></div>
       </div>
-      <p className="loader-text">Loading... {progress.toFixed(2)}%</p>
+      <p className="loader-text">Please be patient. The entirerty of time is Loading... {progress.toFixed(2)}%</p>
     </Html>
   )
 }
